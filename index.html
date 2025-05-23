@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>BukoBears - Ositos de Tela</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #ffb3cc);
+      font-family: 'Poppins', sans-serif;
+      color: #6b2c4a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px 15px;
+      position: relative;
+      overflow-x: hidden;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 5px;
+      color: #a72f5f;
+      text-shadow: 1px 1px 3px #f8bbd0;
+    }
+    .frase {
+      font-style: italic;
+      font-size: 1.4rem;
+      margin-bottom: 25px;
+      color: #b75b7d;
+      max-width: 650px;
+      line-height: 1.5;
+    }
+    h2 {
+      color: #a72f5f;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    .catalogo {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .catalogo img {
+      width: 320px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(167, 47, 95, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .catalogo img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(167, 47, 95, 0.6);
+    }
+    table {
+      width: 90%;
+      max-width: 480px;
+      border-collapse: collapse;
+      margin: 0 auto;
+      background: #ffd6e8;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(167, 47, 95, 0.25);
+      text-align: center;
+    }
+    th, td {
+      padding: 18px 25px;
+      font-size: 1.2rem;
+      color: #6b2c4a;
+    }
+    th {
+      background-color: #a72f5f;
+      color: #fff;
+    }
+    tr:nth-child(even) td { background-color: #f9c5db; }
+    tr:nth-child(odd) td { background-color: #fcdde7; }
+
+    .contacto {
+      margin-top: 40px;
+      font-size: 1.2rem;
+      color: #6b2c4a;
+    }
+    .contacto a {
+      color: #a72f5f;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .contacto a:hover { text-decoration: underline; }
+
+    .redes {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .redes a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #a72f5f;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .redes img {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* Corazones cayendo */
+    .corazon {
+      position: fixed;
+      color: #f06292;
+      font-size: 24px;
+      animation: caer 6s linear infinite;
+      user-select: none;
+      pointer-events: none;
+    }
+    @keyframes caer {
+      0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Mensaje para activar audio */
+    #msgAudio {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffbfd3;
+      color: #a72f5f;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(167, 47, 95, 0.3);
+      z-index: 1000;
+      cursor: pointer;
+    }
+    #msgAudio:hover {
+      background-color: #d94f82;
+      color: white;
+    }
+
+    @media(max-width: 700px) {
+      .catalogo img { width: 90vw; }
+      table { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<h1>BukoBears - Ositos de Tela</h1>
+<div class="frase">
+  Los ositos más tiernos y suaves que siempre estarán contigo para alegrar tus días, darte abrazos cálidos y acompañarte en cada momento especial. ¡Regala amor con BukoBears! 🧸💞
+</div>
+
+<h2>Catálogo</h2>
+<div class="catalogo">
+  <img src="https://i.postimg.cc/2jWV3d85/2-f776f680-64cc-4d0c-8165-bf0f80b2b01b.jpg" alt="Oso 1" />
+  <img src="https://i.postimg.cc/jS3sMCd9/download.jpg" alt="Oso 2" />
+</div>
+
+<h2>Precios</h2>
+<table>
+  <tr><th>Producto</th><th>Precio</th></tr>
+  <tr><td>Oso pequeño</td><td>$35</td></tr>
+  <tr><td>Oso grande</td><td>$40</td></tr>
+</table>
+
+<div class="contacto">
+  <h2>Contáctanos</h2>
+  <p>Teléfono: 9612968737</p>
+  <div class="redes">
+    <a href="https://wa.me/529612968737" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      WhatsApp
+    </a>
+    <a href="https://instagram.com/rochacristell" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
+      Instagram
+    </a>
+  </div>
+</div>
+
+<audio id="musica" autoplay loop muted>
+  <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg" />
+  Tu navegador no soporta el audio.
+</audio>
+
+<div id="msgAudio">🎵 Haz clic aquí o en cualquier parte para activar la música</div>
+
+<script>
+  // Activar música al hacer clic
+  const musica = document.getElementById('musica');
+  const msgAudio = document.getElementById('msgAudio');
+  function activarMusica() {
+    if (musica.muted) {
+      musica.muted = false;
+      musica.play();
+      msgAudio.style.display = 'none';
+    }
+  }
+  document.body.addEventListener('click', activarMusica);
+  msgAudio.addEventListener('click', activarMusica);
+
+  // Corazones que caen
+  function crearCorazon() {
+    const corazon = document.createElement('div');
+    corazon.classList.add('corazon');
+
+</body>
+</html>
+    corazon.style.left = Math.random() * 100 + 'vw';
+    corazon.style.fontSize = (12 + Math.random() * 20) + 'px';
+    corazon.style.animationDuration = (4 + Math.random() * 4) + 's';
+    corazon.textContent = '❤️';
+    document.body.appendChild(corazon);
+    setTimeout(() => corazon.remove(), 7000);
+  }
+  setInterval(crearCorazon, 300);
+</script>
